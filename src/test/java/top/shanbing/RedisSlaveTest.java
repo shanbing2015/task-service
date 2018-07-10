@@ -18,7 +18,7 @@ public class RedisSlaveTest {
     @Autowired
     private RedisStringService redisStringService;
 
-    private static String key = "k3";
+    private static String key = "k10";
     private static String value = "v123";
 
     @Test
@@ -29,7 +29,7 @@ public class RedisSlaveTest {
     @Test
     public void testGet() throws InterruptedException{
         int i=0;
-        while (i++<30){
+        while (true){
             System.out.println(i+"\t"+redisStringService.get(key));
             Thread.sleep(1000);
         }

@@ -24,8 +24,8 @@ spring:
       max-wait: 100 #最大阻塞等待时间
       min-idle: 10 #最小空闲连接
     timeout: 0 #连接超时
-
-    #sentinel:
-    #  master: master
-    #  nodes: 120.79.223.130:6380
+    #redis哨兵
+    sentinel:
+      master: mymaster
+      nodes: 120.79.223.130:26379,120.79.223.130:26380,120.79.223.130:26381
 
